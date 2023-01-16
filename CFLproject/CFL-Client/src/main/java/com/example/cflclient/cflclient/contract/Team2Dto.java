@@ -1,5 +1,5 @@
 
-package com.example.cflclient.contract;
+package com.example.cflclient.cflclient.contract;
 
 import java.util.HashMap;
 import java.util.List;
@@ -25,7 +25,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
     "is_winner"
 })
 @Generated("jsonschema2pojo")
-public class Team1Dto {
+public class Team2Dto {
 
     @JsonProperty("team_id")
     private Integer teamId;
@@ -40,7 +40,7 @@ public class Team1Dto {
     @JsonProperty("venue_id")
     private Integer venueId;
     @JsonProperty("linescores")
-    private List<LinescoreTeam1Dto> linescores = null;
+    private List<LinescoreTeam2Dto> linescores = null;
     @JsonProperty("is_at_home")
     private Boolean isAtHome;
     @JsonProperty("is_winner")
@@ -109,12 +109,12 @@ public class Team1Dto {
     }
 
     @JsonProperty("linescores")
-    public List<LinescoreTeam1Dto> getLinescores() {
+    public List<LinescoreTeam2Dto> getLinescores() {
         return linescores;
     }
 
     @JsonProperty("linescores")
-    public void setLinescores(List<LinescoreTeam1Dto> linescores) {
+    public void setLinescores(List<LinescoreTeam2Dto> linescores) {
         this.linescores = linescores;
     }
 

@@ -1,5 +1,5 @@
 
-package com.example.cflclient.contract;
+package com.example.cflclient.cflclient.contract;
 
 import java.util.HashMap;
 import java.util.Map;

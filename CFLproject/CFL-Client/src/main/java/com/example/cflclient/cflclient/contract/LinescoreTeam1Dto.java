@@ -1,5 +1,5 @@
 
-package com.example.cflclient.contract;
+package com.example.cflclient.cflclient.contract;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -13,37 +13,37 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "school_id",
-    "name"
+    "quarter",
+    "score"
 })
 @Generated("jsonschema2pojo")
-public class SchoolDto {
+public class LinescoreTeam1Dto {
 
-    @JsonProperty("school_id")
-    private Integer schoolId;
-    @JsonProperty("name")
-    private String name;
+    @JsonProperty("quarter")
+    private Integer quarter;
+    @JsonProperty("score")
+    private Integer score;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-    @JsonProperty("school_id")
-    public Integer getSchoolId() {
-        return schoolId;
+    @JsonProperty("quarter")
+    public Integer getQuarter() {
+        return quarter;
     }
 
-    @JsonProperty("school_id")
-    public void setSchoolId(Integer schoolId) {
-        this.schoolId = schoolId;
+    @JsonProperty("quarter")
+    public void setQuarter(Integer quarter) {
+        this.quarter = quarter;
     }
 
-    @JsonProperty("name")
-    public String getName() {
-        return name;
+    @JsonProperty("score")
+    public Integer getScore() {
+        return score;
     }
 
-    @JsonProperty("name")
-    public void setName(String name) {
-        this.name = name;
+    @JsonProperty("score")
+    public void setScore(Integer score) {
+        this.score = score;
     }
 
     @JsonAnyGetter
