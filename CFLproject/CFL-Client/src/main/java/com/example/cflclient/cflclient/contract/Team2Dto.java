@@ -39,8 +39,8 @@ public class Team2Dto {
     private Integer score;
     @JsonProperty("venue_id")
     private Integer venueId;
-    @JsonProperty("linescores")
-    private List<LinescoreTeam2Dto> linescores = null;
+//    @JsonProperty("linescores")
+//    private List<LinescoreTeam2Dto> linescores;
     @JsonProperty("is_at_home")
     private Boolean isAtHome;
     @JsonProperty("is_winner")
@@ -108,15 +108,15 @@ public class Team2Dto {
         this.venueId = venueId;
     }
 
-    @JsonProperty("linescores")
-    public List<LinescoreTeam2Dto> getLinescores() {
-        return linescores;
-    }
-
-    @JsonProperty("linescores")
-    public void setLinescores(List<LinescoreTeam2Dto> linescores) {
-        this.linescores = linescores;
-    }
+//    @JsonProperty("linescores")
+//    public List<LinescoreTeam2Dto> getLinescores() {
+//        return linescores;
+//    }
+//
+//    @JsonProperty("linescores")
+//    public void setLinescores(List<LinescoreTeam2Dto> linescores) {
+//        this.linescores = linescores;
+//    }
 
     @JsonProperty("is_at_home")
     public Boolean getIsAtHome() {

@@ -10,12 +10,12 @@ import org.springframework.stereotype.Repository;
 public class CFLDataCatalog implements ICatalogData{
 
     private final GamesRepository games;
+    private final PlayersRepository players;
     private final CoinTossRepository coinToss;
-    private final DatumRepository datum;
     private final EventStatusRepository eventStatus;
     private final EventTypeRepository eventType;
-    private final LinescoreTeam1Repository linescoreTeam1;
-    private final LinescoreTeam2Repository linescoreTeam2;
+//    private final LinescoreTeam1Repository linescoreTeam1;
+//    private final LinescoreTeam2Repository linescoreTeam2;
     private final Team1Repository team1;
     private final Team2Repository team2;
     private final VenueRepository venue;

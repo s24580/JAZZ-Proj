@@ -4,16 +4,15 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
-public class CFLClientSettings implements ICFLClientSettings{
+public class CFLClientSettings implements ICFLClientSettings {
 
-    @Value("${wpisz api key do CFL}")
+    @Value("V9E2zaOwyP9qsnSrOKspwxGACthOADpI")
     private String apiKey;
-    @Value("${wpisz base url}")
+    @Value("api.cfl.ca")
     private String baseUrl;
-    @Value("${nwm czy trzeba}")
-    private int apiVersion;
-
-
+//    @Value("/v1")
+//    private int apiVersion;
+    /***http://api.cfl.ca/v1/games/2013?key=V9E2zaOwyP9qsnSrOKspwxGACthOADpI***/
 
     public String getApiKey() {
         return apiKey;
@@ -23,8 +22,6 @@ public class CFLClientSettings implements ICFLClientSettings{
         return baseUrl;
     }
 
-    @Override
-    public int getApiVersion() {
-        return apiVersion;
-    }
+//    @Override
+//    public int getApiVersion(){return  apiVersion;}
 }

@@ -1,6 +1,7 @@
 
 package com.example.cflclient.cflclient.contract;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -39,8 +40,8 @@ public class Team1Dto {
     private Integer score;
     @JsonProperty("venue_id")
     private Integer venueId;
-    @JsonProperty("linescores")
-    private List<LinescoreTeam1Dto> linescores = null;
+//    @JsonProperty("linescores")
+//    private List<LinescoreTeam1Dto> linescores;
     @JsonProperty("is_at_home")
     private Boolean isAtHome;
     @JsonProperty("is_winner")
@@ -108,15 +109,15 @@ public class Team1Dto {
         this.venueId = venueId;
     }
 
-    @JsonProperty("linescores")
-    public List<LinescoreTeam1Dto> getLinescores() {
-        return linescores;
-    }
-
-    @JsonProperty("linescores")
-    public void setLinescores(List<LinescoreTeam1Dto> linescores) {
-        this.linescores = linescores;
-    }
+//    @JsonProperty("linescores")
+//    public List<LinescoreTeam1Dto> getLinescores() {
+//        return linescores;
+//    }
+//
+//    @JsonProperty("linescores")
+//    public void setLinescores(List<LinescoreTeam1Dto> linescores) {
+//        this.linescores = linescores;
+//    }
 
     @JsonProperty("is_at_home")
     public Boolean getIsAtHome() {

@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CFL-Client/CFL-Client.iml" filepath="$PROJECT_DIR$/CFL-Client/CFL-Client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CFL-Updater/CFL-Updater.iml" filepath="$PROJECT_DIR$/CFL-Updater/CFL-Updater.iml" />
       <module fileurl="file://$PROJECT_DIR$/CFL-WebAPI/CFL-WebAPI.iml" filepath="$PROJECT_DIR$/CFL-WebAPI/CFL-WebAPI.iml" />
       <module fileurl="file://$PROJECT_DIR$/CFL-data/CFL-data.iml" filepath="$PROJECT_DIR$/CFL-data/CFL-data.iml" />
       <module fileurl="file://$PROJECT_DIR$/CFLproject.iml" filepath="$PROJECT_DIR$/CFLproject.iml" />

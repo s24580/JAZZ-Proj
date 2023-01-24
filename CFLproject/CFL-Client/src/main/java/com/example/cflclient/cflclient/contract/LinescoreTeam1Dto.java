@@ -20,19 +20,19 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 public class LinescoreTeam1Dto {
 
     @JsonProperty("quarter")
-    private Integer quarter;
+    private String quarter;
     @JsonProperty("score")
     private Integer score;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     @JsonProperty("quarter")
-    public Integer getQuarter() {
+    public String getQuarter() {
         return quarter;
     }
 
     @JsonProperty("quarter")
-    public void setQuarter(Integer quarter) {
+    public void setQuarter(String quarter) {
         this.quarter = quarter;
     }
 

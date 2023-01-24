@@ -10,7 +10,7 @@ import lombok.Setter;
 public class Games {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     private Integer gameId;
     private String dateStart;
@@ -19,19 +19,20 @@ public class Games {
     private Integer week;
     private Integer season;
     private Integer attendance;
-    @OneToOne(mappedBy = "Games")
+    @OneToOne(mappedBy = "games")
     private EventType eventType;
-    @OneToOne(mappedBy = "Games")
+    @OneToOne(mappedBy = "games")
     private EventStatus eventStatus;
-    @ManyToOne
+    @OneToOne(mappedBy = "games")
     private Venue venue;
-    @OneToOne(mappedBy = "Games")
+    @OneToOne(mappedBy = "games")
     private Weather weather;
-    @OneToOne(mappedBy = "Games")
+    @OneToOne(mappedBy = "games")
     private CoinToss coinToss;
+
     private String ticketsUrl;
-    @OneToOne(mappedBy = "Games")
+    @OneToOne(mappedBy = "games")
     private Team1 team1;
-    @OneToOne(mappedBy = "Games")
+    @OneToOne(mappedBy = "games")
     private Team2 team2;
 }

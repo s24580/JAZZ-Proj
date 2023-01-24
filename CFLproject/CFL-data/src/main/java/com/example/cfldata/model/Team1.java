@@ -22,9 +22,12 @@ public class Team1 {
     private String abbreviation;
     private Integer score;
     private Integer venueId;
-    @OneToMany(mappedBy = "Team1")
-    private List<LinescoreTeam1> linescores = new ArrayList<>();
+//    @OneToMany//(mappedBy = "Team1")
+//    private List<LinescoreTeam1> linescores = new ArrayList<>();
     private Boolean isAtHome;
     private Boolean isWinner;
+
+    @OneToOne
+    Games games;
 
 }
