@@ -3,6 +3,7 @@ package com.example.cfldata.model;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.NonNull;
 import lombok.Setter;
 
 @Entity
@@ -10,8 +11,8 @@ import lombok.Setter;
 @Setter
 public class Players {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     private Integer cflCentralId;
     private Integer statsIncId;
@@ -25,6 +26,7 @@ public class Players {
     private Integer rookieYear;
     private Boolean foreignPlayer;
     private String imageUrl;
+
     @ManyToOne
     private School school;
 }

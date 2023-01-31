@@ -13,7 +13,7 @@ public class VenueMapper implements IMapEntities<VenueDto, Venue>{
 
     @Override
     public Venue map(VenueDto venueDto, Venue venue) {
-        venue.setVenueId(venue.getVenueId());
+        venue.setVenueId(venueDto.getVenueId());
         venue.setName(venueDto.getName());
         return venue;
     }

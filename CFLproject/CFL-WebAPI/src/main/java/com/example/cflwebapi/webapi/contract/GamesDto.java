@@ -12,15 +12,25 @@ import lombok.*;
 @NoArgsConstructor
 public class GamesDto {
 
-    private Long id;
-    private Integer gameId;
+    @JsonProperty("game_id")
+    private Long gameId;
+    @JsonProperty("date_start")
     private String dateStart;
+    @JsonProperty("game_number")
     private Integer gameNumber;
+    @JsonProperty("season")
     private Integer season;
-    private EventType eventType;
-    private Venue venue;
-    private Weather weather;
-    private Team1 team1;
-    private Team2 team2;
+    @JsonProperty("eventType")
+    private EventTypeDto eventTypeDto;
+    @JsonProperty("venue")
+    private VenueDto venueDto;
+    @JsonProperty("weather")
+    private WeatherDto weatherDto;
+    @JsonProperty("team1")
+    private Team1Dto team1Dto;
+    @JsonProperty("team2")
+    private Team2Dto team2Dto;
+
+
 
 }

@@ -20,5 +20,6 @@ public class CFLDataCatalog implements ICatalogData{
     private final Team2Repository team2;
     private final VenueRepository venue;
     private final WeatherRepository weather;
+    private final GamesResultRepository gamesResult;
 
 }

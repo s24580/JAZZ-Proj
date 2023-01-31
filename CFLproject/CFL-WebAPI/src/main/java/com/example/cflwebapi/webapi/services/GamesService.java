@@ -1,56 +1,49 @@
 package com.example.cflwebapi.webapi.services;
 
-import com.example.cfldata.model.*;
 import com.example.cfldata.repositories.CFLDataCatalog;
-import com.example.cfldata.repositories.ICatalogData;
 import com.example.cflwebapi.webapi.contract.GamesDto;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.example.cflwebapi.webapi.contract.GamesResultDto;
+import com.example.cflwebapi.webapi.mappers.ICatalogMap;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import java.util.List;
+
 
 @Service
-//@RequiredArgsConstructor
+@RequiredArgsConstructor
 public class GamesService implements  IGamesService {
 
     private final CFLDataCatalog db;
+    private final ICatalogMap catalog;
 
-    @Autowired
-    public GamesService(CFLDataCatalog db) {
-        this.db = db;
-    }
+
 
     @Override
-    public long saveGame(GamesDto gamesDto) {
-        var gameEntity = new Games();
-        gameEntity.setGameId(gamesDto.getGameId());
-        gameEntity.setDateStart(gamesDto.getDateStart());
-        gameEntity.setGameNumber(gamesDto.getGameNumber());
-        gameEntity.setSeason(gamesDto.getSeason());
-        gameEntity.setEventType(gamesDto.getEventType());
-        gameEntity.setVenue(gamesDto.getVenue());
-        gameEntity.setWeather(gamesDto.getWeather());
-        gameEntity.setTeam1(gamesDto.getTeam1());
-        gameEntity.setTeam2(gamesDto.getTeam2());
-        db.getGames().save(gameEntity);
-        return gameEntity.getId();
-    }
+    public GamesResultDto getAll() {
 
-    @Override
-    public List<GamesDto> getAll() {
-        return db.getGames()
-                .findAll()
-                .stream()
-                .map(entity->new GamesDto(entity.getId(),
-                        entity.getGameId(),
-                        entity.getDateStart(),
-                        entity.getGameNumber(),
-                        entity.getSeason(),
-                        entity.getEventType(),
-                        entity.getVenue(),
-                        entity.getWeather(),
-                        entity.getTeam1(),
-                        entity.getTeam2()))
-                .toList();
+        var gamesResultDto = new GamesResultDto();
+        var gamesResult = db.getGamesResult().findAll().get(0);
+
+
+        gamesResult.getGames().forEach((games) -> {
+            var gamesDto =  catalog.getGamesMapper().map(games);
+            var eventTypeDto = catalog.getEventTypeMapper().map(games.getEventType());
+            var weatherDto = catalog.getWeatherMapper().map(games.getWeather());
+            var venueDto = catalog.getVenueMapper().map(games.getVenue());
+            var team1Dto  = catalog.getTeam1Mapper().map(games.getTeam1());
+            var team2Dto  = catalog.getTeam2Mapper().map(games.getTeam2());
+
+            gamesDto.setEventTypeDto(eventTypeDto);
+            gamesDto.setWeatherDto(weatherDto);
+            gamesDto.setVenueDto(venueDto);
+            gamesDto.setTeam1Dto(team1Dto);
+            gamesDto.setTeam2Dto(team2Dto);
+
+            gamesResultDto.getGamesDto().add(gamesDto);
+
+        });
+
+        return gamesResultDto;
+
     }
 
 }

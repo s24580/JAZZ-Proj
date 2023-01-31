@@ -24,14 +24,13 @@ public class Team1Mapper implements IMapEntities<Team1Dto, Team1>{
         team1.setAbbreviation(team1Dto.getAbbreviation());
         team1.setScore(team1Dto.getScore());
         team1.setVenueId(team1Dto.getVenueId());
-//        for(LinescoreTeam1Dto entity: team1Dto.getLinescores()) {
-//            team1.getLinescores().add(linescoreTeam1Mapper.map(entity));
-//        }
-//        LinescoreTeam1Mapper linescoreTeam1Mapper = new LinescoreTeam1Mapper();
-//        team1.getLinescores().add(linescoreTeam1Mapper.map(team1.getLinescores().get(0),team1Dto.getLinescores().get(0)));
-
         team1.setIsAtHome(team1Dto.getIsAtHome());
         team1.setIsWinner(team1Dto.getIsWinner());
         return team1;
     }
 }
+//        for(LinescoreTeam1Dto entity: team1Dto.getLinescores()) {
+//            team1.getLinescores().add(linescoreTeam1Mapper.map(entity));
+//        }
+//        LinescoreTeam1Mapper linescoreTeam1Mapper = new LinescoreTeam1Mapper();
+//        team1.getLinescores().add(linescoreTeam1Mapper.map(team1.getLinescores().get(0),team1Dto.getLinescores().get(0)));

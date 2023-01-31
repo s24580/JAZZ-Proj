@@ -29,7 +29,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 public class Team1Dto {
 
     @JsonProperty("team_id")
-    private Integer teamId;
+    private Long teamId;
     @JsonProperty("location")
     private String location;
     @JsonProperty("nickname")
@@ -50,12 +50,12 @@ public class Team1Dto {
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     @JsonProperty("team_id")
-    public Integer getTeamId() {
+    public Long getTeamId() {
         return teamId;
     }
 
     @JsonProperty("team_id")
-    public void setTeamId(Integer teamId) {
+    public void setTeamId(Long teamId) {
         this.teamId = teamId;
     }
 

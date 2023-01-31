@@ -26,7 +26,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 public class EventStatusDto {
 
     @JsonProperty("event_status_id")
-    private Integer eventStatusId;
+    private Long eventStatusId;
     @JsonProperty("name")
     private String name;
     @JsonProperty("is_active")
@@ -45,12 +45,12 @@ public class EventStatusDto {
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     @JsonProperty("event_status_id")
-    public Integer getEventStatusId() {
+    public Long getEventStatusId() {
         return eventStatusId;
     }
 
     @JsonProperty("event_status_id")
-    public void setEventStatusId(Integer eventStatusId) {
+    public void setEventStatusId(Long eventStatusId) {
         this.eventStatusId = eventStatusId;
     }
 

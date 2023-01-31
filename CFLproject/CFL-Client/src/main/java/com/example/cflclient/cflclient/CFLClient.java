@@ -6,6 +6,8 @@ import com.example.cflclient.cflclient.contract.PlayersDto;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.List;
+
 @Component
 public class CFLClient implements ICFLClient {
     RestTemplate restClient;
@@ -38,4 +40,10 @@ public class CFLClient implements ICFLClient {
         var response = restClient.getForEntity(url,PlayersDto.class).getBody();
         return response;
     }
+//    @Override
+//    public List<GamesDto> getGamesAll(){
+//        String url = _settings.getBaseUrl()
+//                .
+//
+//    }
 }

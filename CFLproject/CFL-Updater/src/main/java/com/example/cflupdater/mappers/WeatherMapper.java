@@ -17,7 +17,7 @@ public class WeatherMapper implements IMapEntities<WeatherDto, Weather>{
         weather.setSky(weatherDto.getSky());
         weather.setWindSpeed(weatherDto.getWindSpeed());
         weather.setWindDirection(weatherDto.getWindDirection());
-        weather.setFieldConditions(weather.getFieldConditions());
+        weather.setFieldConditions(weatherDto.getFieldConditions());
 
         return weather;
     }

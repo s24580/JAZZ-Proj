@@ -3,6 +3,7 @@ package com.example.cfldata.model;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.NonNull;
 import lombok.Setter;
 
 import java.util.ArrayList;
@@ -14,7 +15,8 @@ import java.util.List;
 public class Weather {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
+
 
     private Integer temperature;
     private String sky;
@@ -23,5 +25,5 @@ public class Weather {
     private String fieldConditions;
 
     @OneToOne
-    Games games;
+    private Games games;
 }

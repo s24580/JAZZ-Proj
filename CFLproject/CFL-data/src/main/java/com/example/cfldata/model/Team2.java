@@ -3,6 +3,7 @@ package com.example.cfldata.model;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.NonNull;
 import lombok.Setter;
 
 import java.util.ArrayList;
@@ -14,9 +15,10 @@ import java.util.List;
 public class Team2 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
-    private Integer teamId;
+    private Long teamId;
+
     private String location;
     private String nickname;
     private String abbreviation;
@@ -28,5 +30,5 @@ public class Team2 {
     private Boolean isWinner;
 
     @OneToOne
-    Games games;
+    private Games games;
 }

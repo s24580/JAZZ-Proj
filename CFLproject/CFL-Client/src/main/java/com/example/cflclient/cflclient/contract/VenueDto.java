@@ -20,19 +20,19 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 public class VenueDto {
 
     @JsonProperty("venue_id")
-    private Integer venueId;
+    private Long venueId;
     @JsonProperty("name")
     private String name;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     @JsonProperty("venue_id")
-    public Integer getVenueId() {
+    public Long getVenueId() {
         return venueId;
     }
 
     @JsonProperty("venue_id")
-    public void setVenueId(Integer venueId) {
+    public void setVenueId(Long venueId) {
         this.venueId = venueId;
     }
 

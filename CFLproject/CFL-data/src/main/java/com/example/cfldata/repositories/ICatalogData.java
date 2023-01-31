@@ -12,4 +12,5 @@ public interface ICatalogData {
     Team2Repository getTeam2();
     VenueRepository getVenue();
     WeatherRepository getWeather();
+    GamesResultRepository getGamesResult();
 }

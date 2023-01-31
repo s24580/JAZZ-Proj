@@ -25,6 +25,11 @@ public class Team2Mapper implements IMapEntities<Team2Dto, Team2>{
         team2.setAbbreviation(team2Dto.getAbbreviation());
         team2.setScore(team2Dto.getScore());
         team2.setVenueId(team2Dto.getVenueId());
+        team2.setIsAtHome(team2Dto.getIsAtHome());
+        team2.setIsWinner(team2Dto.getIsWinner());
+        return team2;
+    }
+}
 //        for(LinescoreTeam2Dto entity: team2Dto.getLinescores()) {
 //            team2.getLinescores().add(linescoreTeam2Mapper.map(entity));
 //        }
@@ -32,8 +37,3 @@ public class Team2Mapper implements IMapEntities<Team2Dto, Team2>{
 //        weather.setWeatherDescription(weatherDescriptionMapper.map(weatherDto.getCurrentWeatherDto().getWeatherDescriptionDto().get(0)));
 //        LinescoreTeam2Mapper linescoreTeam2Mapper = new LinescoreTeam2Mapper();
 //        team2.getLinescores().add(linescoreTeam2Mapper.map(team2.getLinescores().get(0),team2Dto.getLinescores().get(0)));
-        team2.setIsAtHome(team2Dto.getIsAtHome());
-        team2.setIsWinner(team2Dto.getIsWinner());
-        return team2;
-    }
-}

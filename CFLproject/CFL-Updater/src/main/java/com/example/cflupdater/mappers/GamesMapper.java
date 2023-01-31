@@ -9,11 +9,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class GamesMapper implements IMapEntities<GamesDto, Games> {
 
-    private EventTypeMapper typeMapper;
-    private VenueMapper venueMapper;
-    private WeatherMapper weatherMapper;
-    private Team1Mapper team1Mapper;
-    private Team2Mapper team2Mapper;
+//    private EventTypeMapper typeMapper;
+//    private VenueMapper venueMapper;
+//    private WeatherMapper weatherMapper;
+//    private Team1Mapper team1Mapper;
+//    private Team2Mapper team2Mapper;
 
     @Override
     public Games map(GamesDto gamesDto) {
@@ -22,7 +22,7 @@ public class GamesMapper implements IMapEntities<GamesDto, Games> {
 
     @Override
     public Games map(GamesDto gamesDto, Games games) {
-        games.setGameId(gamesDto.getGameId());
+        games.setGamesId(gamesDto.getGameId());
         games.setAttendance(gamesDto.getAttendance());
         games.setDateStart(gamesDto.getDateStart());
         games.setGameNumber(gamesDto.getGameNumber());
@@ -36,9 +36,5 @@ public class GamesMapper implements IMapEntities<GamesDto, Games> {
 //        games.setTeam2(team2Mapper.map(gamesDto.getTeam2()));
         return games;
     }
-//    no np w updaterze jak juz pobierzesz sobie dane z tego api
-//    to bierzesz games.getVenues.add(venue)
-//    i to samo dla venue
-//      venues.getGames.add(games)
-//    cos w tym stylu
+
 }
